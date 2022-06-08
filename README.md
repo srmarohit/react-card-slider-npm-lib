@@ -4,7 +4,7 @@ This NPM package is built by Rohit Sharma. It provides the card sliding feature.
 
 ## Installation
 
-Install my-project with git and npm
+Install package with yarn and npm
 
 ```bash
    npm install react-card-slider
@@ -24,7 +24,7 @@ Install my-project with git and npm
 
 - place ReactCardSlider inside JSX .
 
-- pass slider props which must be contains Array of data.
+- pass slides props which must be contains Array of data.
 
 ## Usage/Examples
 
