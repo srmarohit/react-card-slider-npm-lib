@@ -29,7 +29,7 @@ Install package with yarn and npm
 ## Usage/Examples
 
 ```javascript
-import ReactCardSlider from './components/React-Card-Slider';
+import ReactCardSlider from 'react-card-slider';
 
 function App() {
 
