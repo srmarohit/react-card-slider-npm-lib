@@ -1,70 +1,94 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-card-slider
+This NPM package is built by Rohit Sharma. It provides the card sliding feature.Basically it helps to display a collection of reactangle card has category pills, image, title, button, price tag etc.  in the horizontal direction. 
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Install package with yarn and npm
 
-### `npm start`
+```bash
+   npm install react-card-slider
+```
+    or 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+   yarn add react-card-slider
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Steps
 
-### `npm test`
+- Once install the library
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- First Import Module like
+  - import ReactCardSlider from './components/React-Card-Slider';
 
-### `npm run build`
+- place ReactCardSlider inside JSX .
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- pass slides props which must be contains Array of data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage/Examples
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```javascript
+import ReactCardSlider from 'react-card-slider';
 
-### `npm run eject`
+function App() {
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  const slides = [
+      {
+          image : "https://picsum.photos/200/300" ,
+          categories : [
+            {
+              title : "Mobile",
+              bg : 'black' ,
+              color : '#ff0' ,
+            }
+          ],
+          title : "Samsung Pro 10 Hello Friend How are you",
+          price : "311$",
+          btnText : "Buy Now",
+          handleClick : () => alert("you ordered 311") ,
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+          // css
+          title_color : '#f0f',
+          price_color : 'green',
+          btn_bg_color : 'black',
+          btn_color : 'white'
+      },
+     {
+  image : "https://picsum.photos/200/300" ,
+  categories : [
+    {
+      title : "Mobile",
+      bg : 'black' ,
+      color : '#ff0' ,
+    }
+  ],
+  title : "Samsung Pro 10",
+  price : "311$",
+  btnText : "Buy Now",
+  handleClick : () => alert("you ordered 311") ,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  // css
+  title_color : '#f0f',
+  price_color : 'green',
+  btn_bg_color : 'black',
+  btn_color : 'white'
+}
+  ]
+  return (
+    <div id="body">
+       <ReactCardSlider slides={slides}/>
+    </div>
+  );
+}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+export default App;
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [ROHIT SHARMA](https://www.github.com/srmarohit)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
